@@ -2,9 +2,10 @@ const { registerUser, loginUser } = require("../services/auth.service");
 
 exports.register = async (req, res) => {
   try {
+    console.log(req.body);
     const {
       email,
-      fullName: { firstName, lastName },
+      fullName,
       password,
     } = req.body;
 
