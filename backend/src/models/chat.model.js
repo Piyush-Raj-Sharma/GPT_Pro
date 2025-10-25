@@ -1,12 +1,10 @@
-const { default: mongoose } = require("mongoose");
-
-mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 const chatSchema = new mongoose.Schema(
   {
     user: {
-      type: mongoose.Schema.Types.objectId,
-      ref: "user",
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users",
       required: true,
     },
     title: {
