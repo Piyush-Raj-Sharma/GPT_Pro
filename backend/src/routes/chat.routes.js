@@ -1,8 +1,8 @@
 const express = require('express');
-const verifyToken = require('../middleware/verifyToken');
+const verifyAccessToken = require('../middlewares/auth.middleware');
 
 const router = express.Router();
 
-post('/', verifyToken);
+router.post('/', verifyAccessToken);
 
 module.exports = router;
